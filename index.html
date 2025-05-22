@@ -11,32 +11,36 @@
     <h1>PRAL Calculator</h1>
     <div id="pralTable">
 
-      <div>Продукт</div>
-      <div>Масса (г)</div>
-      <div>PRAL на 100 г</div>
-      <div>Delete</div>
+      <div class="row">
+        <div>Продукт</div>
+        <div>Масса (г)</div>
+        <div>PRAL на 100 г</div>
+        <div>Delete</div>
+      </div>
 
-      <div>
-        <select onchange="onProductChange(this)">
-          <option value="" data-pral="0">Выберите продукт</option>
-          <option value="Овсянка" data-pral="3.1">Овсянка</option>
-          <option value="Изюм" data-pral="-21">Изюм</option>
-          <option value="Пшено" data-pral="0.5">Пшено</option>
-          <option value="Гречка" data-pral="3.5">Гречка</option>
-          <option value="Крекер" data-pral="8.5">Крекер</option>
-          <option value="Вафля" data-pral="9">Вафля</option>
-          <option value="Печенье" data-pral="11">Печенье</option>
-          <option value="Шоколад" data-pral="13">Шоколад</option>
-        </select>
-      </div>
-      <div class="mass">
-        <input type="number" value="100">
-      </div>
-      <div class="pral">
-        <input type="number" value="0" readonly>
-      </div>
-      <div>
-        <button onclick="removeRow()">✖</button>
+      <div class="row">
+        <div>
+          <select onchange="onProductChange(this)">
+            <option value="" data-pral="0">Select Food</option>
+            <option value="Овсянка" data-pral="3.1">Овсянка</option>
+            <option value="Изюм" data-pral="-21">Изюм</option>
+            <option value="Пшено" data-pral="0.5">Пшено</option>
+            <option value="Гречка" data-pral="3.5">Гречка</option>
+            <option value="Крекер" data-pral="8.5">Крекер</option>
+            <option value="Вафля" data-pral="9">Вафля</option>
+            <option value="Печенье" data-pral="11">Печенье</option>
+            <option value="Шоколад" data-pral="13">Шоколад</option>
+          </select>
+        </div>
+        <div class="mass">
+          <input type="number" value="100">
+        </div>
+        <div class="pral">
+          <input type="number" value="0" readonly>
+        </div>
+        <div>
+          <button onclick="removeRow(this)">✖</button>
+        </div>
       </div>
 
     </div>
