@@ -12,26 +12,25 @@ const productList = [
 ];
 
 function addRow() {
-  table.innerHTML += `
+  let rowDiv = document.createElement("div");
+  rowDiv.classList.add("row");
+  rowDiv.innerHTML = `
     <div>
       <select onchange="onProductChange(this)">
-        <option value="" data-pral="0" selected>Выберите продукт</option>
+        <option value="" data-pral="0" selected>Select Food</option>
         ${productList.map(p => `<option value="${p.name}" data-pral="${p.pral}">${p.name}</option>`).join('')}
-        <option value="manual" data-pral="">-- Ввести вручную --</option>
       </select>
     </div>
     <div class="mass"><input type="number" value="100"></div>
     <div class="pral"><input type="number" value="0" readonly></div>
-    <div><button onclick="removeRow()">✖</button></div>
+    <div><button onclick="removeRow(this)">✖</button></div>
   `;
+  table.appendChild(rowDiv);
 }
 
-function removeRow() {
-  for (let i = 0; i < 4; i++) {
-    if (table.lastElementChild) {
-      table.removeChild(table.lastElementChild);
-    }
-  }
+function removeRow(currentBtn) {
+  const row = currentBtn.closest(".row");
+  row.remove();
 }
 
 function onProductChange(select) {
