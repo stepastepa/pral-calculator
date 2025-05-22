@@ -1,0 +1,10 @@
+# Operating System generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
