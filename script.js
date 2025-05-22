@@ -2,9 +2,10 @@ const table = document.getElementById("pralTable");
 
 const productList = [
   {name: "Овсянка", pral: 3.1},
-  {name: "Изюм", pral: -21},
   {name: "Пшено", pral: 0.5},
   {name: "Гречка", pral: 3.5},
+  {name: "Горох", pral: 3.5},
+  {name: "Изюм", pral: -21},
   {name: "Крекер", pral: 8.5},
   {name: "Вафля", pral: 9},
   {name: "Печенье", pral: 11},
@@ -27,6 +28,9 @@ function addRow() {
   `;
   table.appendChild(rowDiv);
 }
+
+// add initial first row:
+addRow();
 
 function removeRow(currentBtn) {
   const row = currentBtn.closest(".row");
