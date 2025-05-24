@@ -12,28 +12,52 @@ const productList = [
   {name: "Шоколад", pral: 13}
 ];
 
-function addRow() {
-  let rowDiv = document.createElement("div");
-  rowDiv.classList.add("row");
-  rowDiv.innerHTML = `
-    <div>
-      <select onchange="onProductChange(this)">
+function addCard() {
+  if(document.querySelector(".plus")) {
+    document.querySelector(".plus").remove(); // remove plus
+  }
+
+  let cardDiv = document.createElement("div");
+  cardDiv.classList.add("card");
+  cardDiv.innerHTML = `
+    <div class="food item">
+      <label for="foodSelect">Food</label>
+      <select onchange="onProductChange(this)" id="foodSelect">
         <option value="" data-pral="0" selected>Select Food</option>
         ${productList.map(p => `<option value="${p.name}" data-pral="${p.pral}">${p.name}</option>`).join('')}
       </select>
     </div>
-    <div class="mass"><input type="number" value="100"></div>
-    <div class="pral"><input type="number" value="0" readonly></div>
-    <div><button onclick="removeRow(this)">✖</button></div>
+    <div class="mass item">
+      <label for="massInput">Mass</label>
+      <input type="number" value="100" id="massInput">
+    </div>
+    <div class="pral item">
+      <label for="pralInput">PRAL(100g)</label>
+      <input type="number" value="0" readonly id="pralInput">
+    </div>
+    <div class="delete">
+      <button onclick="removeRow(this)"></button>
+    </div>
   `;
-  table.appendChild(rowDiv);
+  table.appendChild(cardDiv);
+
+  addPlus(); // add plus
+}
+
+function addPlus() {
+  let plusDiv = document.createElement("div");
+  plusDiv.classList.add("plus");
+  plusDiv.innerHTML = `
+    <button onclick="addCard()">+</button>
+  `;
+  table.appendChild(plusDiv);
 }
 
 // add initial first row:
-addRow();
+addCard();
 
 function removeRow(currentBtn) {
-  const row = currentBtn.closest(".row");
+  const row = currentBtn.closest(".card");
   row.remove();
 }
 
