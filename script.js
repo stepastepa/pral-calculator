@@ -17,23 +17,25 @@ function addCard() {
     document.querySelector(".plus").remove(); // remove plus
   }
 
+  let i = table.children.length;
+
   let cardDiv = document.createElement("div");
   cardDiv.classList.add("card");
   cardDiv.innerHTML = `
     <div class="food item">
-      <label for="foodSelect">Food</label>
-      <select onchange="onProductChange(this)" id="foodSelect">
+      <label for="foodSelect-${i}">Food</label>
+      <select onchange="onProductChange(this)" id="foodSelect-${i}">
         <option value="" data-pral="0" selected>Select Food</option>
         ${productList.map(p => `<option value="${p.name}" data-pral="${p.pral}">${p.name}</option>`).join('')}
       </select>
     </div>
     <div class="mass item">
-      <label for="massInput">Mass</label>
-      <input type="number" value="100" id="massInput">
+      <label for="massInput-${i}">Mass</label>
+      <input type="number" value="100" id="massInput-${i}">
     </div>
     <div class="pral item">
-      <label for="pralInput">PRAL(100g)</label>
-      <input type="number" value="0" readonly id="pralInput">
+      <label for="pralInput-${i}">PRAL(100g)</label>
+      <input type="number" value="0" readonly id="pralInput-${i}">
     </div>
     <div class="delete">
       <button onclick="removeRow(this)"></button>
