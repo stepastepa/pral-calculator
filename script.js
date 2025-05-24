@@ -34,7 +34,7 @@ function addCard() {
       <input type="number" value="100" id="massInput-${i}">
     </div>
     <div class="pral item">
-      <label for="pralInput-${i}">PRAL(100g)</label>
+      <label for="pralInput-${i}">PRAL (100g)</label>
       <input type="number" value="0" readonly id="pralInput-${i}">
     </div>
     <div class="delete">

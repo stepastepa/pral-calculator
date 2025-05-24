@@ -20,14 +20,6 @@ body {
   gap: 1rem;
 }
 
-input[type="number"] {
-  width: 75px;
-}
-
-select {
-  width: 100%;
-}
-
 #pralTable {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -46,6 +38,7 @@ select {
   justify-content: center;
   gap: 0.5rem;
   min-height: 180px;
+  box-shadow: 0 2px 0 hsl(0deg 0% 0% / 0.075);
 }
 
 .plus {
@@ -66,7 +59,35 @@ select {
 }
 
 .item label {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
+  color: #444;
+  font-weight: bold;
+  padding-left: 0.55rem;
+}
+
+input[type="number"] {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  border: none;
+  background-color: hsl(0deg 0% 0% / 0.05);
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+
+  font-size: 0.9rem;
+  color: #333;
+}
+
+input {
+  border: none;
+  background-color: hsl(0deg 0% 0% / 0.05);
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.25rem;
+
+  font-size: 0.9rem;
+  color: #333;
 }
 
 .delete {
