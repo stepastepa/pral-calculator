@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  margin: 2rem;
+  margin: 1rem;
   background-color: #ebebeb;
   color: #333;
 }
@@ -25,12 +25,12 @@ input[type="number"] {
 }
 
 select {
-  width: 125px;
+  width: 100%;
 }
 
 #pralTable {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 0.5rem;
 }
 
@@ -45,7 +45,7 @@ select {
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 200px;
+  min-height: 180px;
 }
 
 .plus {
@@ -54,7 +54,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
+  min-height: 180px;
   overflow: hidden;
 }
 
