@@ -30,7 +30,7 @@ function addCard() {
       </select>
     </div>
     <div class="mass item">
-      <label for="massInput-${i}">Mass</label>
+      <label for="massInput-${i}">Mass (g)</label>
       <input type="number" value="100" id="massInput-${i}">
     </div>
     <div class="pral item">
