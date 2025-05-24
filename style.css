@@ -76,19 +76,29 @@ select {
   padding: 0.5rem;
 }
 
+button {
+  cursor: pointer;
+}
+
+.button {
+  padding: 5px;
+}
+
 .delete button {
   display: block;
+  padding: 0;
   width: 0.75rem;
   height: 0.75rem;
-  cursor: pointer;
   border-radius: 50%;
   background-color: rgb(233, 42, 39);
   border: none;
+  transition: all 0.2s ease;
 }
-
-button {
-  padding: 5px;
-  cursor: pointer;
+.delete button:hover {
+  scale: 1.25;
+}
+.delete button:active {
+  scale: 1.5;
 }
 
 .plus button {
