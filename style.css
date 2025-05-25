@@ -101,10 +101,6 @@ button {
   cursor: pointer;
 }
 
-.button {
-  padding: 5px;
-}
-
 .delete button {
   display: block;
   padding: 0;
@@ -133,4 +129,50 @@ button {
 }
 .plus button:hover {
   opacity: 0.5;
+}
+
+.result {
+  width: min(400px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 0 hsl(0deg 0% 0% / 0.075);
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.result h2 {
+  flex: 999 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 1rem;
+
+  font-size: 0.85rem;
+}
+
+#result {
+  background-color: hsl(0deg 0% 0% / 0.05);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.25rem;
+  font-size: 1.75rem;
+}
+
+.button {
+  flex: 1 0 auto;
+
+  border: none;
+  background-color: royalblue;
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+.button:hover {
+  background-color: rgb(51, 90, 200);
 }

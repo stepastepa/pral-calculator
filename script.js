@@ -83,5 +83,5 @@ function calculatePRAL() {
     total += currentMass * currentPral / 100;
   }
 
-  document.getElementById("result").textContent = "Total PRAL: " + total.toFixed(2);
+  document.getElementById("result").textContent = total.toFixed(2);
 }
