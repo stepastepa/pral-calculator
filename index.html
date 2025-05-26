@@ -7,16 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>PRAL Calculator</h1>
-    <div class="avatar"></div>
-  </header>
   <div class="wrapper">
+    <header>
+      <h1>PRAL Calculator</h1>
+      <div class="avatar"></div>
+    </header>
+
     <div id="pralTable"></div>
 
     <div class="result">
-      <button class="button" onclick="calculatePRAL()">Calculate PRAL</button>
-      <h2>Result: <span id="result">0.00</span></h2>
+      <div class="result-bar">
+        <button class="button" onclick="calculatePRAL()">Calculate PRAL</button>
+        <h2>Result: <span id="result">0.00</span></h2>
+      </div>
     </div>
   </div>
 
