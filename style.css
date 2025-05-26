@@ -4,17 +4,48 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: sans-serif;
-  margin: 1rem;
   background-color: #ebebeb;
   color: #333;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+
+  box-shadow: 0 2px 0 hsl(0deg 0% 0% / 0.075);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.avatar {
+  background-color: royalblue;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .wrapper {
   /* max-width: 650px; */
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -145,6 +176,22 @@ button {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+
+  position: sticky;
+  bottom: 1rem;
+  z-index: 2;
+}
+
+.wrapper:after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to top, #ebebeb, #ebebeb 50%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .result h2 {
