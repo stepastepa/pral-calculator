@@ -164,7 +164,7 @@ button {
 .result {
   position: sticky;
   bottom: 0;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 1rem;
   pointer-events: none;
 }
 .result:after {
@@ -174,7 +174,7 @@ button {
   left: 0;
   right: 0;
   height: calc(100% + 25px);
-  background: linear-gradient(to top, #ebebeb, #ebebeb 50%, transparent 100%);
+  background: linear-gradient(to top, #ebebeb, #ebebeb 75%, transparent 100%);
   pointer-events: none;
 }
 
